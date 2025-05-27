@@ -2,8 +2,9 @@ import requests
 import json  # Added import
 
 url = "http://localhost:8000/emotion"
+YOUR_IMAGE_PATH = r"01.jpg" # <-- Replace with your image path
 files = {'file': open(
-    r"D:\\MEDIA\\Pictures\\Downloaded\\Danielle-01.jpg", 'rb')}
+    YOUR_IMAGE_PATH, 'rb')}
 
 try:
     response = requests.post(url, files=files)
